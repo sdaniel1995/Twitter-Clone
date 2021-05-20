@@ -1,13 +1,11 @@
 pipeline {
   agent any 
-   environment {
-        CI = 'true' 
-    }
+  tools {nodejs "node"}
+
   stages {
       stage("Installing Dependencies") {
           steps {
               sh 'npm install'
-              sh 'npm --version'
           }
       }
   }
