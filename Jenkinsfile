@@ -3,6 +3,11 @@ pipeline {
   tools {nodejs "nodeJS"}
 
   stages {
+      stage("Clean") {
+          steps {
+              sh 'rm -r build'
+          }
+      }
       stage("Installing Dependencies") {
           steps {
               sh 'npm install'
