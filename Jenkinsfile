@@ -1,9 +1,11 @@
 pipeline {
   agent any 
+  tools {nodejs "nodejs"}
   stages {
-      stage("Test") {
-          steps{
-              echo $PATH
+      stage("Installing Dependencies") {
+          steps {
+              sh 'npm install'
+              sh 'npm --version'
           }
       }
   }
