@@ -4,8 +4,10 @@ pipeline {
 
   stages {
       stage("Clean") {
-          sh 'rm -rf node_modules/'
-          sh 'rm -f package.json'
+          steps{
+               sh 'rm -rf node_modules/'
+               sh 'rm -f package.json'
+          }
       }
       stage("Installing Dependencies") {
           steps {
