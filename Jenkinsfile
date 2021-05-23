@@ -15,7 +15,7 @@ pipeline {
       }
       stage("Deploy") {
           steps {
-              sh 'npm run-script-build'
+              sh 'npm run-script deploy'
           }
       }
   }
