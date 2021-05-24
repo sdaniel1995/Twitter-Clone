@@ -7,9 +7,11 @@ const TweetBox = () => {
         <div className="tweetBox">
             <form action="">
                 <div className="tweetBox--input">
-                    <Avatar src="https://kajabi-storefronts-pro/"/>
+                    <Avatar src="https://kajabi-storefronts-production.global.ssl.fastly.net/kajabi-storefronts-"/>
+                    <input type="text" placeholder="What's happening?" />
                 </div>
-                <Button>Tweet</Button>
+                <input className="tweetBox-imageInput" type="text" placeholder="Optional: Enter image URL" />
+                <Button className="tweetBox-tweetButton">Tweet</Button>
             </form>
         </div>
     )
