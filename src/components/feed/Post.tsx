@@ -13,18 +13,18 @@ const Post = ({ displayName, username, verified, text, image, avatar }: any) => 
     return (
         <div className="post">
             <div className="post-avatar">
-                <Avatar src="#"/>
+                <Avatar src={avatar}/>
             </div>
             <div className="post-body">
                 <div className="post-header">
                     <div className="post-headerText">
-                        <h3>Shane{" "} <span className="post-headerSpecial"><VerifiedUserIcon className="post-badge"/>@im_a_dada</span></h3>
+                        <h3>{displayName}{" "} <span className="post-headerSpecial">{verified &&<VerifiedUserIcon className="post-badge"/>}@{username}</span></h3>
                     </div>
                     <div className="post-headerDescription">
-                        <p>I challenge you to build a twitter clone with React</p>
+                        <p>{text}</p>
                     </div>
                 </div>
-                <img src="https://media3.giphy.com/media/65ATdpi3clAdjomZ39/giphy.gif" alt="" />
+                <img src={image}/>
                 <div className="post-footer">
                     <ChatBubbleOutlineIcon fontSize="small"/>
                     <RepeatIcon fontSize="small"/>
